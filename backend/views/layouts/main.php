@@ -24,7 +24,7 @@
 <div class="container" id="page">
 	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'type' => 'inverse', // null or 'inverse'
-	'brand' => 'Project name',
+	'brand' => Yii::app()->name,
 	'brandUrl' => '#',
 	'collapse' => true, // requires bootstrap-responsive.css
 	'items' => array(
