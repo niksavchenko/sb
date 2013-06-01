@@ -80,6 +80,7 @@ require([
     App.addInitializer(function() {
         /* render footer page */
         var footerPage = new FooterPageView();
+				console.log('App.addInitializer: footerPage: ', footerPage);
         App.footerRegion.show(footerPage);
     });
 

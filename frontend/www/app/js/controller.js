@@ -51,10 +51,10 @@ define([
         },
 				
         /* renders fifa ranking */
-        goto_fifaRanking: function(username) {
+        goto_fifaRanking: function() {
 
             require(['views/fifaRanking/page'], function(DashboardPage){
-                var dashboardPage = new DashboardPage({username:username});
+                var dashboardPage = new DashboardPage();
                 App.pageRegion.show(dashboardPage);
             });
         },

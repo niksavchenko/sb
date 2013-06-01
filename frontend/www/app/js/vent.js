@@ -8,5 +8,6 @@
 require(['backboneMarionette'], function (Marionette) {
     // http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/
     'use strict';
+		console.log('vent.js');
     return new Marionette.EventAggregator();
 });
