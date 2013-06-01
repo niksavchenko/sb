@@ -16,19 +16,19 @@ define([
     
 			defaults:{
 				authenticated: false,
-                username: null
+				username: null
 			},
 
-            /**
-             * validation object
-             * @see backbone.validation.js
-             */
-            validation: {
-                username: {
-                    required: true,
-                    msg: 'Username is required'
-                }
-            }
+			/**
+				* validation object
+				* @see backbone.validation.js
+				*/
+			validation: {
+				username: {
+					required: true,
+					msg: 'Username is required'
+				}
+			}
 		});
 
 	});

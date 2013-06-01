@@ -3,7 +3,7 @@
  */
 // Use ECMAScript 5 Strict Mode
 "use strict";
-
+console.log('~~~~~~~~~~~~~~~ Start');
 // Define jQuery as AMD module
 define.amd.jQuery = true;
 
@@ -22,8 +22,8 @@ require.config({
         /* underscore */
         underscore:'libs/underscore/underscore',
         underscoreString:'libs/underscore/underscore.string',
-
-        /* backbone */
+ 
+       /* backbone */
         backbone:'libs/backbone/backbone',
         backboneRelational:'libs/backbone/backbone-relational',
         backboneBinder:'libs/backbone/backbone.model-binder',
@@ -68,13 +68,15 @@ require.config({
 ;
 
 // Let's kick off the application
-// Let's kick off the application
 require([
     'app',
     'router',
     'views/footer/footer'
 ], function (App, Router, FooterPageView) {
-
+		console.log('main.js');
+		console.log('App: ', App);
+		console.log('Router: ', Router);
+		console.log('FooterPageView: ', FooterPageView);
     App.addInitializer(function() {
         /* render footer page */
         var footerPage = new FooterPageView();
@@ -83,8 +85,9 @@ require([
 
     /* attach router to the app */
     App.router = Router;
-
+		console.log('App.start');
     App.start();
-
+		console.log('Backbone.history.start');
     Backbone.history.start();
+		console.log(' / main.js');
 });

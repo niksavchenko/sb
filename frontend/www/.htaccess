@@ -540,16 +540,16 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 RedirectMatch 404 /\\.git(/|$)
 
 
-#RewriteEngine on
+RewriteEngine on
 
 # If you are in a sub folder of your web root you
 # might have to enable something like this:
 #
 # RewriteBase /~antonio/app/frontend/www
 
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteRule . index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
 
 
 # Tmp for large data uploads 

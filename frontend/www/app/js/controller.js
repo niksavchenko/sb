@@ -7,9 +7,10 @@ define([
     'backboneMarionette',
     'http',
     'app',
-    'session'
+    'session' // TODO: check end delete if needn't'
 ], function(Marionette, Http, App) {
     'use strict';
+		console.log('controller.js');
 
     return {
         /* renders error page with correspondent failure number */
@@ -22,6 +23,7 @@ define([
                 var description = Http.getStatusDescription(actions) || 'Unknown';
                 var errorPage = new ErrorPage({model: new Backbone.Model({number:actions, description:description})});
                 App.pageRegion.show(errorPage);
+								return true;
             });
         },
         /* renders index page - login*/

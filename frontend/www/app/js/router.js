@@ -12,6 +12,7 @@ define([
 ], function (Marionette, Controller) {
 
     'use strict';
+		console.log('route.js:', Marionette, Controller);
 
     var AppRouter = Marionette.AppRouter.extend({
         /**
@@ -22,9 +23,9 @@ define([
          * @see controller.js
          */
         appRoutes:{
-            '.*':'goto_fifaRanking', // /
-            //'index':'goto_index', // #/index
-            'index':'goto_fifaRanking', // #/fifaRanking
+            '.*':'goto_index', // /
+            'index':'goto_index', // #/index
+            //'index':'goto_fifaRanking', // #/fifaRanking
             'settings':'goto_settings', // #/settings
             'fifaRanking':'goto_fifaRanking', // #/fifaRanking
             'dashboard/:username':'goto_dashboard', // #/dashboard
@@ -32,7 +33,6 @@ define([
 
             // paths not found
             '*path':'goto_notFound'
-
         }
     });
 

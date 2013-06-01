@@ -6,7 +6,6 @@
  * Date: 7/22/12
  * Time: 11:13 AM
  */
-
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', 3);
 
@@ -43,5 +42,6 @@ Yii::registerAutoloader(array("EZendAutoloader", "loadClass"), true);
 
 $app->run();
 
-/* uncomment if you wish to debug your resulting config */
+/* uncomment if you wish to debug your resulting config
 echo '<pre>' . dump($config) . '</pre>';
+//*/

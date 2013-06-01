@@ -7,7 +7,7 @@ class SiteController extends Controller
 	 */
 	public function actionIsLogged()
 	{
-
+		$data = array();
 		$data['authenticated'] = !Yii::app()->user->getIsGuest();
 		if ($data['authenticated']) $data['username'] = Yii::app()->user->name;
 
@@ -30,7 +30,8 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
-		if ($error = Yii::app()->errorHandler->error)
+		$error = Yii::app()->errorHandler->error;
+		if ($error)
 		{
 			if (Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
@@ -45,7 +46,7 @@ class SiteController extends Controller
 	public function actionLogin()
 	{
 		$data = $this->getInputAsJson();
-
+		
 		if(empty($data['username']) || empty($data['password']))
 		{
 			$this->sendResponse(401, 'Please, fill up all username and password to login!');

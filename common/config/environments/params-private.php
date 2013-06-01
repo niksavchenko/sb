@@ -24,10 +24,10 @@
 return array(
 	'env.code' => 'private',
 	// DB connection configurations
-	'db.name' => 'a_a',
-	'db.connectionString' => 'mysql:host=localhost;dbname=a_a',
-	'db.username' => 'a',
-	'db.password' => 'zwqv5wypYNDrSfSn',
+	'db.name' => 'sb_a',
+	'db.connectionString' => 'mysql:host=localhost;dbname=sb_a',
+	'db.username' => 'sb',
+	'db.password' => 'mW5y5ScJznmvWVru',
 
 	// test database {
 	'testdb.name' => '',
