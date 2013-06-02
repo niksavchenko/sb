@@ -40,7 +40,9 @@ EZendAutoloader::$basePath = Yii::getPathOfAlias('common.lib') . DIRECTORY_SEPAR
 Yii::registerAutoloader(array("EZendAutoloader", "loadClass"), true);
 */
 
+YII::trace("Test", 'application');
 $app->run();
 
-/* uncomment if you wish to debug your resulting config */
+/* uncomment if you wish to debug your resulting config 
 echo '<pre>' . dump($config) . '</pre>';
+//*/

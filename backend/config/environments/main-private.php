@@ -1,4 +1,5 @@
 <?php
+
 /**
  * main.php
  *
@@ -10,21 +11,33 @@
  * related to your development machine. You can also use main-local.php
  */
 return array(
-    'components'=>array(
-        'log'=>array(
-            'class'=>'CLogRouter',
-            'routes'=>array(
-                array(
-                    'class'=>'CWebLogRoute',
-                    //'levels'=>'trace, info',
-                    //'categories'=>'system.*',
-                ),
-                array(
-                    'class'=>'CProfileLogRoute',
-                    //'levels'=>'error, warning',
-                    //'emails'=>'admin@example.com',
-                ),
-            ),
-        ),
-    )	
+	'import' => array(
+		'common.extensions.yiidebugtb.*',
+		'common.extensions.nsvardumper.*',
+	),
+	'components' => array(
+		'log' => array(
+			'class' => 'CLogRouter',
+			'routes' => array(
+				array(
+					'class' => 'CProfileLogRoute',
+				//'levels'=>'error, warning',
+				//'emails'=>'admin@example.com',
+				),
+				array(
+					'class' => 'CWebLogRoute',
+					//'levels'=>'trace, info',
+					//'categories'=>'system.*',
+					'categories' => 'application',
+					'showInFireBug' => true
+				),
+				array(// configuration for the toolbar
+					'class' => 'XWebDebugRouter',
+					'config' => 'alignLeft, opaque, runInDebug, fixedPos, collapsed, yamlStyle',
+					'levels' => 'error, warning, trace, profile, info',
+					'allowedIPs' => array('127.0.0.1'), // , '::1', '192.168.1.54', '192\.168\.1[0-5]\.[0-9]{3}'
+				),
+			),
+		),
+	)
 );
