@@ -5,17 +5,36 @@ class RankingController extends Controller
 
 	public function actionIndex()
 	{
-		$dataProvider = new CActiveDataProvider('FifaRanking',
-			array(
-			 'criteria' => array(
-				'condition' => 'rank=189',
-				'order' => 'id DESC',
-			 ),
-			 'pagination' => array(
-				'pageSize' => 20,
-			 ),
-		 ));
-		$this->sendResponse(200, CJSON::encode($dataProvider->getData()));
+//		$criteria=new CDbCriteria;
+//		$criteria->select='fifa3';
+//		$criteria->condition='rank=:rank';
+//		$criteria->params=array(':rank'=>189);
+//		$rankings = FifaRanking::model()->findAll($criteria);
+
+		// TODO: create model
+		$rankings = Yii::app()->db->createCommand()
+		//->select('fifa3', 'ranking')
+		->select('fifa3, ranking, points, change_status, cn_name, change_points')
+		->from('a_fifa_ranking')
+		->where('rank=:rank', array(":rank" => 189))
+		->order('ranking ASC')
+		//->text; /*
+		->queryAll(); //*/
+		// TODO: BLOCKER! delete this temp output
+		// TODO: BLOCKER! delete this temp output
+		//nsVarDumper::dump($rankings);
+		$this->sendResponse(200, CJSON::encode($rankings));
+//		$dataProvider = new CActiveDataProvider('FifaRanking',
+//			array(
+//			 'criteria' => array(
+//				'condition' => 'rank=189',
+//				'order' => 'id DESC',
+//			 ),
+//			 'pagination' => array(
+//				'pageSize' => 20,
+//			 ),
+//		 ));
+		//$this->sendResponse(200, CJSON::encode($rankings));
 //		$this->render('index',array(
 //			'dataProvider'=>$dataProvider,
 //		));		
