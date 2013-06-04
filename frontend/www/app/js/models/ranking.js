@@ -1,19 +1,17 @@
 /**
- * UserModel object
- * 
- * Resources taken from Sherago <not yet used in kmodeling>
+ * FIFA Ranking: Ranking Model 
  * 
  */
-define([
-	'jquery', 
-	'underscore', 
-	'backbone',
-	], function($, _, Backbone) {
-
-		var UserModel = Backbone.Model.extend({
-
-			urlRoot: 'api/user'
+console.log('1.3');
+define(
+	[
+		'backbone'
+	],
+	function(Backbone) {
+		var FifaRankingModel = Backbone.Model.extend({
+			//urlRoot: '/ranking'
 		});
-
-		return UserModel;
-	});
+		console.log('FIFA Ranking: Ranking Model', FifaRankingModel);
+		return FifaRankingModel;
+	}
+);

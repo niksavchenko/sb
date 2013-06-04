@@ -29,7 +29,7 @@ return CMap::mergeArray(
 				array('site/login', 'pattern' => 'api/site/login', 'verb' => 'POST'),
 				array('site/logout', 'pattern' => 'api/site/logout', 'verb' => 'POST'),
 				/* for REST please @see http://www.yiiframework.com/wiki/175/how-to-create-a-rest-api/ */
-                // REST Controller Patterns
+        // REST Controller Patterns
 				// specify the REST controllers names that lay on your "api" module
 				// make sure the "api" module is initialized!
 //                array('api/<controller>/list', 'pattern' => 'api/<controller:(controllernameA|controllernameB)>s', 'verb' => 'GET'),

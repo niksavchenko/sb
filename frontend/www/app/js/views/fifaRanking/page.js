@@ -1,15 +1,29 @@
 /**
- * FifaRankinPageView
- *
- * Renders demo fifaRanking page
- *
- * @author 
+ * FIFA Ranking: Collection View
+ * and in the same time Page View
+ * 
  */
-define([
-    'backboneMarionette',
-    'text!templates/fifaRanking/page.html'
-], function (Marionette, FifaRankingPageTemplate) {
-    return Marionette.ItemView.extend({
-        template:FifaRankingPageTemplate
-    });
-});
+console.log ("1.1");
+define(
+	[
+		'backboneMarionette',
+		'text!templates/fifaRanking/page.html',
+		'collections/rankings',
+		'views/fifaRanking/ranking'
+	],
+	function(Marionette, FifaRankingPageTemplate, FifaRankingCollection, FifaRankingView) {
+		console.log('FIFA Ranking: Collection/Page View');
+		return Marionette.ItemView.extend({
+			collection: new FifaRankingCollection(),
+			itemView: FifaRankingView,
+			template: FifaRankingPageTemplate,
+				
+			initialize: function() {
+				console.log('FIFA Ranking: Collection/Page View', this);
+				//this.collection.fetch();
+			},
+				
+			zz: ''
+		});
+	}
+);

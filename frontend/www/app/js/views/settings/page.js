@@ -5,11 +5,14 @@
  *
  * @author Antonio Ramirez <antonio@clevertech.biz>
  */
-define([
-    'backboneMarionette',
-    'text!templates/settings/page.html'
-], function (Marionette, SettingsPageTemplate) {
-    return Marionette.ItemView.extend({
-        template:SettingsPageTemplate
-    });
-});
+define(
+	[
+		'backboneMarionette',
+		'text!templates/settings/page.html'
+	],
+	function(Marionette, SettingsPageTemplate) {
+		return Marionette.ItemView.extend({
+			template: SettingsPageTemplate
+		});
+	}
+);

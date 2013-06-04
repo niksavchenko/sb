@@ -10,9 +10,10 @@ define([
 	'backbone',
 	], function($, _, Backbone) {
 
-		var RakningModel = Backbone.Model.extend({
-			urlRoot: '/ranking'
+		var UserModel = Backbone.Model.extend({
+
+			urlRoot: 'api/user'
 		});
 
-		return RakningModel;
+		return UserModel;
 	});
