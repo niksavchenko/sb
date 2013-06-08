@@ -377,13 +377,14 @@ Backbone.BUI = (function (Backbone, _, $, require) {
                 }
 
                 that.$el.on('hidden', function () {
-                    //console.log('Hidden From Modal');
+                    console.log('Hidden From Modal');
+
+                    confirmBtn && confirmBtn.close();
+                    cancelBtn && cancelBtn.close();
 
                     if (_.isFunction(that._config.onHide)) {
                         that._config.onHide();
                     }
-                    confirmBtn && confirmBtn.close();
-                    cancelBtn && cancelBtn.close();
                 })
 
                 that.$el.modal('show');
@@ -393,13 +394,10 @@ Backbone.BUI = (function (Backbone, _, $, require) {
         confirm:function (e) {
             e && e.preventDefault();
 
-            var close = true;
+            this.close.apply(this);
+
             if (_.isFunction(this._config.onConfirm)) {
-                close = this._config.onConfirm();  /* if we return false we wish to cancel the closing */
-            }
-            if(close)
-            {
-                this.close.apply(this);
+                this._config.onConfirm();
             }
 
         },
@@ -407,11 +405,11 @@ Backbone.BUI = (function (Backbone, _, $, require) {
         cancel:function (e) {
             e && e.preventDefault();
 
+            this.close.apply(this);
+
             if (_.isFunction(this._config.onCancel)) {
                 this._config.onCancel();
             }
-
-            this.close.apply(this);
         },
 
         close:function () {
@@ -506,7 +504,7 @@ Backbone.BUI = (function (Backbone, _, $, require) {
         tagName:'textarea',
 
         initialize:function (options) {
-            //console.log(this.attributes);
+            console.log(this.attributes);
             this._config = _.extend({
                 redactorEditor:BUI.Loader.redactorEditor,
                 redactorPath:BUI.Config.REDACTOR,

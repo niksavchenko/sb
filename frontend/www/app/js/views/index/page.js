@@ -75,7 +75,7 @@ define(
 				}
 				else {
 					// now display index
-					App.router.navigate('index', {trigger: true});
+					App.router.navigate('login', {trigger: true});
 				}
 
 			},

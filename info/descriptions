@@ -1,0 +1,24 @@
+
+'use strict';
+
+nik savchenko <niksavchenko@gmail.com>
+
+/*global require:false, define: false, console: false*/
+/*global define: false, console: false, Backbone: false, $: false, _:false*/
+
+ * @param {object} Marionette - Backbone.Marionette
+ * @param {string} FooterTemplate - template for current page/elemen
+ * @param {object} Backbone instance of Backbone
+ * @param {object} Http see utils/http.js
+ * @param {object} App Marionett Application instance
+ * @param {object} FifaConfederationModel - model for the collection
+ * @param {object} FifaConfederationModel - model for the template
+
+
+ * @param {object} Marionette - Backbone.Marionette
+ * @param {string} FifaConfederationsTemplate - template for the current view
+ * @param {object} FifaConfederationsCollection - collection for the current view
+ * @param {object} FifaConfederationView - item view for the CompositeView
+
+ALTER TABLE `sb_a`.`a_fifa_confederations` DROP INDEX `abbreviation` ,
+ADD UNIQUE `abbreviation` ( `abbreviation` ) 

@@ -13,7 +13,6 @@ class RankingController extends Controller
 
 		// TODO: create model
 		$rankings = Yii::app()->db->createCommand()
-		//->select('fifa3', 'ranking')
 		->select('fifa3, ranking, points, change_status, cn_name, change_points')
 		->from('a_fifa_ranking')
 		->where('rank=:rank', array(":rank" => 189))
