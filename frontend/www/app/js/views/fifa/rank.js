@@ -15,7 +15,7 @@
 define([
 	'backboneMarionette',
 	'app',
-	'text!templates/index/page.tpl',
+	'text!templates/fifa/index.tpl',
 	'views/header/main'
 ], function (Marionette, App, IndexPageTemplate, HeaderMenuView) {
 	'use strict';
@@ -24,7 +24,7 @@ define([
 		template: IndexPageTemplate,
 		regions: {
 			nav: "#sb-confederations",
-			ranking: "#sb-ranking-table"
+			ranking: "#sb-ranking-table-wrapper"
 		},
 		beforeRender: function () {
 			var headerMenuView = new HeaderMenuView({model: new Backbone.Model({username: this.options.username})});

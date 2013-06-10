@@ -1,5 +1,7 @@
 
-<section class="page">LOADING....</section>
+<section class="page">
+	<p class="sb-loading">LOADING...</p>
+</section>
 <footer class="footer"></footer>
 
 <!-- /.container -->

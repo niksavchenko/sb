@@ -30,10 +30,12 @@ define([
 			'.*': 'goto_index', // /
 			'index': 'goto_index', // #/index
 			'login': 'goto_login', // #/login
-			'settings': 'goto_settings', // #/settings
-			'fifaRanking': 'goto_fifaRanking', // #/fifaRanking
-			'dashboard/:username': 'goto_dashboard', // #/dashboard
 			'error/:number': 'goto_error', // #/error/number
+			
+			'dashboard/:username': 'goto_dashboard', // #/dashboard
+			'fifa-ranking': 'goto_fifaRanking', // #/fifaRanking
+			'fifa-ranking-old': 'goto_fifaRankingOld', // #/fifaRankingOld
+			'settings': 'goto_settings', // #/settings
 
 			// paths not found
 			'*path': 'goto_notFound'

@@ -1,9 +1,106 @@
+
+.container {
+	position: relative;
+}
 #loader{
-    background: url('../img/ajax-loader.gif') no-repeat;
-    height: 22px;
-    position: absolute;
-    top: 8px;
-    width: 125px;
-    left: 10px;
-    display: none;
+	background: url('../img/ajax-loader.gif') no-repeat;
+	display: none;
+	height: 22px;
+	position: absolute;
+	right: 60px;
+	top: 10px;
+	width: 125px;
+}
+em {
+    font-family: georgia, times new roman, serif;
+}
+
+
+/* SB classes */
+.sb-right {
+	text-align: right;
+}
+
+
+/* SB elements */
+.sb-loading {
+	margin-top: 30px;
+}
+h2.sb-fifa-ranking { 
+	margin-bottom: 15px;
+}
+.sb-fsavchenko {
+	font-family:georgia, times new roman, serif;
+	background: #EEE;
+	padding: 2px 8px 2px 10px;
+}
+
+/* SB: Ranking Table (sb-rt) */
+.table th.sb-rt-rank {
+	width: 1%;
+}
+.table td.sb-rt-rank {
+	text-align: right;
+}
+.table td.sb-rt-rank:after {
+	content: ".";
+	margin-right:10px;
+}
+.table th.sb-rt-team {}
+.table th.sb-rt-pts {
+	width: 1%;
+}
+.table th.sb-rt-changes {
+	text-align: center;
+	width: 1%;
+}
+.table th.sb-rt-pos {
+	width: 1%;
+}
+.table td.sb-rt-pts, .table td.sb-rt-changes {
+	text-align: right;
+	padding-right:12px;	
+}
+
+
+
+/* Media Queries */
+
+#sb-ranking-table {
+	width: 80%
+}
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	#sb-ranking-table {
+		width: 65%
+	}
+}
+ 
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	#sb-ranking-table {
+		width: 80%
+	}
+}
+ 
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	#sb-fifa-link {
+		display:none;
+	}
+	#sb-ranking-table {
+		width: 65%
+	}
+}
+ 
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	#sb-ranking-table {
+		width: 100%
+	}	
 }

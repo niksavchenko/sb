@@ -17,6 +17,11 @@ define([
 	console.log('controller.js');
 
 	return {
+		/* renders index page*/
+		goto_index: function () {
+			console.log('controller: index');
+			App.router.navigate('fifa-ranking', {trigger: true, replace: true});
+		},
 		/* renders error page with correspondent failure number */
 		goto_error: function (actions) {
 			require(['views/error/page'], function (ErrorPage) {
@@ -31,50 +36,11 @@ define([
 				return true;
 			});
 		},
-		/* renders index page*/
-		goto_index: function () {
-			require([
-				'views/index/page_no_login',
-				'views/fifa/confederationsNav',
-				'views/fifa/rankingTable'
-			], function (IndexPageLayout, ConfederationsView, RankingView) {
-				var
-					indexPageLayout = new IndexPageLayout(),
-					confederationsView = new ConfederationsView(),
-					rankingView = new RankingView();
-				App.pageRegion.show(indexPageLayout);
-				indexPageLayout.nav.show(confederationsView);
-				indexPageLayout.ranking.show(rankingView);
-			});
-		},
 		/* renders login page (formet index) */
 		goto_login: function () {
 			require(['views/index/page'], function (LoginIndexPage) {
 				var loginIndexPage = new LoginIndexPage();
 				App.pageRegion.show(loginIndexPage);
-			});
-		},
-		/* renders settings page */
-		goto_settings: function () {
-			require(['views/settings/page'], function (SettingsPage) {
-				var settingsPage = new SettingsPage();
-				App.pageRegion.show(settingsPage);
-			});
-		},
-		/* renders dashboard */
-		goto_dashboard: function (username) {
-			require(['views/dashboard/page'], function (DashboardPage) {
-				var dashboardPage = new DashboardPage({username: username});
-				App.pageRegion.show(dashboardPage);
-			});
-		},
-		/* renders fifa ranking */
-		goto_fifaRanking: function () {
-			require(['views/fifa/rankingTable'], function (FifaRanknigPage) {
-				var fifaRanknigPage = new FifaRanknigPage();
-				console.log('fifaRanknigPage: ', fifaRanknigPage);
-				App.pageRegion.show(fifaRanknigPage);
-				console.log('controller: goto_fifaRanking: end');
 			});
 		},
 		/* triggers not found error/404 when page is not found */
@@ -98,6 +64,50 @@ define([
 					errorPage = new ErrorPage({model: new Backbone.Model({number: actions, description: description})});
 				App.pageRegion.show(errorPage);
 				return true;
+			});
+		},
+		/*  */
+		/*  */
+		/*  */
+		/*  */
+		/* renders dashboard */
+		goto_dashboard: function (username) {
+			require(['views/dashboard/page'], function (DashboardPage) {
+				var dashboardPage = new DashboardPage({username: username});
+				App.pageRegion.show(dashboardPage);
+			});
+		},
+		/* renders fifaRanking page*/
+		goto_fifaRanking: function () {
+			require([
+				'views/fifa/index',
+				'views/fifa/rank',
+				'views/fifa/confederationsNav',
+				'views/fifa/rankingTable'
+			], function (IndexPageLayout, ConfederationsView, RankingView) {
+				var
+					indexPageLayout = new IndexPageLayout(),
+					confederationsView = new ConfederationsView(),
+					rankingView = new RankingView();
+				App.pageRegion.show(indexPageLayout);
+				indexPageLayout.nav.show(confederationsView);
+				indexPageLayout.ranking.show(rankingView);
+			});
+		},
+		goto_fifaRankingOld: function () {
+			/* renders fifa ranking */
+			require(['views/fifa/rankingTable'], function (FifaRanknigPage) {
+				var fifaRanknigPage = new FifaRanknigPage();
+				console.log('fifaRanknigPage: ', fifaRanknigPage);
+				App.pageRegion.show(fifaRanknigPage);
+				console.log('controller: goto_fifaRanking: end');
+			});
+		},
+		/* renders settings page */
+		goto_settings: function () {
+			require(['views/settings/page'], function (SettingsPage) {
+				var settingsPage = new SettingsPage();
+				App.pageRegion.show(settingsPage);
 			});
 		}
 	};

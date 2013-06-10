@@ -19,8 +19,6 @@ class RankingController extends Controller
 		->order('ranking ASC')
 		//->text; /*
 		->queryAll(); //*/
-		// TODO: BLOCKER! delete this temp output
-		// TODO: BLOCKER! delete this temp output
 		//nsVarDumper::dump($rankings);
 		$this->sendResponse(200, CJSON::encode($rankings));
 //		$dataProvider = new CActiveDataProvider('FifaRanking',
@@ -39,17 +37,6 @@ class RankingController extends Controller
 //		));		
 		//$this->render('index');
 	}
-
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
-	public function actionLastRanking()
-	{
-		$data = array();
-		$model=$this->loadModel($id);
-		$this->sendResponse(200, CJSON::encode($data));
-	}	
 	
 	/**
 	 * Displays a particular model.
@@ -57,9 +44,30 @@ class RankingController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view', array(
-			'model' => $this->loadModel($id),
-		));
+		// TODO: create model
+		$rankings = Yii::app()->db->createCommand()
+		->select('rank, fifa3, ranking, points, change_status, cn_name, change_points')
+		->from('a_fifa_ranking')
+		->where('rank=:rank', array(":rank" => $id))
+		//->text; /*
+		->queryAll(); //*/
+		$this->sendResponse(200, CJSON::encode($rankings));
+	}
+	
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionByConf($id, $conf)
+	{
+		// TODO: create model
+		$rankings = Yii::app()->db->createCommand()
+		->select('rank, fifa3, ranking, points, change_status, cn_name, change_points')
+		->from('a_fifa_ranking')
+		->where('rank=:rank', array(":rank" => $id))
+		//->text; /*
+		->queryAll(); //*/
+		$this->sendResponse(200, CJSON::encode($rankings));
 	}
 	
 	/**
