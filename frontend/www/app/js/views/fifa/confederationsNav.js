@@ -1,24 +1,24 @@
 /**
- * FIFA Ranking: Confederation Collection View
+ * FIFA Ranking: Confederations Navigation Menu (CompositeView)
  * 
  * We are using this View for Nav right before/after ranking table.
  * (We also have one more view for same model for Search form.)
  * 
  * @param {object} Marionette - Backbone.Marionette
- * @param {string} FifaConfederationsTemplate - template for the current view
  * @param {object} FifaConfederationsCollection - collection for the current view
+ * @param {string} FifaConfederationsTemplate - template for the current view
  * @param {object} FifaConfederationView - item view for the CompositeView
  * @author nik savchenko <niksavchenko@gmail.com>
  */
 /*global define: false, console: false*/
 define([
 	'backboneMarionette',
-	'text!templates/fifa/confederationNav.tpl',
 	'collections/confederations',
+	'text!templates/fifa/confederationNav.tpl',
 	'views/fifa/confederationsNavElm'
-], function (Marionette, FifaConfederationsTemplate, FifaConfederationsCollection, FifaConfederationView) {
-	'use strict';	
-	console.log('FIFA Ranking: Confederations Collection View');
+], function (Marionette, FifaConfederationsCollection, FifaConfederationsTemplate, FifaConfederationView) {
+	"use strict";
+	console.log('FIFA Ranking: Confederations Navigation Menu');
 	return Marionette.CompositeView.extend({
 		collection: new FifaConfederationsCollection(),
 		itemView: FifaConfederationView,

@@ -1,25 +1,22 @@
 /**
- * IndexPageView
- *
- * Renders demo index page with login box
+ * FIFA Ranking: Home page layout (IndexPageLayout)
  *
  * @param {object} Marionette - Marionette object
- * @param {string} IndexPageTemplate - template for current page/element
+ * @param {string} FifaRankingLayoutTemplate - template for current page/element
  * 
- * @author Antonio Ramirez <antonio@clevertech.biz>
+ * @author nik savchenko <niksavchenko@gmail.com>
  */
-
-/*global define: false, Backbone:false*/
+/*global define: false*/
 define([
 	'backboneMarionette',
-	'text!templates/fifa/rank.tpl'
-], function (Marionette, RankTemplate) {
-	'use strict';
-
+	'text!templates/fifa/index.tpl'
+], function (Marionette, FifaRankingLayoutTemplate) {
+	"use strict";
 	return Marionette.Layout.extend({
-		template: IndexPageTemplate,
+		template: FifaRankingLayoutTemplate,
 		regions: {
-			nav: "#sb-confederations",
+			confederations: "#sb-confederations",
+			rank: "#sb-rank",
 			ranking: "#sb-ranking-table-wrapper"
 		}
 	});

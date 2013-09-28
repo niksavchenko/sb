@@ -1,45 +1,29 @@
 /**
- * IndexPageView
- *
- * Renders demo index page with login box
+ * FIFA Ranking: Rank Navigation block (ItemView)
  *
  * @param {object} Marionette - Marionette object
- * @param {object} App Marionett Application instance
- * @param {string} IndexPageTemplate - template for current page/element
- * @param {object} HeaderMenuView - ...
+ * @param {object} FifaRankModel - model current Rank info for navigation
+ * @param {string} FifaRankRegionTemplate - template for current page/element
  * 
- * @author Antonio Ramirez <antonio@clevertech.biz>
+ * @author nik savchenko <niksavchenko@gmail.com>
  */
-
-/*global define: false, Backbone:false*/
+/*global define: false, console: false*/
 define([
 	'backboneMarionette',
-	'app',
-	'text!templates/fifa/index.tpl',
-	'views/header/main'
-], function (Marionette, App, IndexPageTemplate, HeaderMenuView) {
-	'use strict';
-
-	return Marionette.Layout.extend({
-		template: IndexPageTemplate,
-		regions: {
-			nav: "#sb-confederations",
-			ranking: "#sb-ranking-table-wrapper"
-		},
-		beforeRender: function () {
-			var headerMenuView = new HeaderMenuView({model: new Backbone.Model({username: this.options.username})});
-			App.menuRegion.show(headerMenuView);
-		}
+	'models/rank',
+	'text!templates/fifa/rank.tpl'
+], function (Marionette, FifaRankModel, FifaRankRegionTemplate) {
+	"use strict";
+	console.log('FIFA Ranking: Rank Navigation ItemView');
+	return Marionette.ItemView.extend({
+		model: new FifaRankModel(),
+		template: FifaRankRegionTemplate,
+		tagName: "div",
+		initialize: function () {
+			console.log('FIFA Ranking: Rank Nvaigation. fech', this);
+			this.model.on('change', this.render, this);
+			this.model._fetchLast();
+			console.log('FIFA Ranking: Rank Nvaigation. json', this.model.toJSON());
+		}			
 	});
-
-//	return Marionette.ItemView.extend({
-//		template: IndexPageTemplate,
-//		/**
-//		 * before rendering dashboard, render main top menu
-//		 */
-//		beforeRender: function () {
-//			var headerMenuView = new HeaderMenuView({model: new Backbone.Model({username: this.options.username})});
-//			App.menuRegion.show(headerMenuView);
-//		}
-//	});
 });

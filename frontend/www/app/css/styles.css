@@ -66,14 +66,14 @@ h2.sb-fifa-ranking {
 
 /* Media Queries */
 
-#sb-ranking-table {
+.sb-rt-context {
 	width: 80%
 }
 
 
 /* Large desktop */
 @media (min-width: 1200px) {
-	#sb-ranking-table {
+	.sb-rt-context {
 		width: 65%
 	}
 }
@@ -81,7 +81,7 @@ h2.sb-fifa-ranking {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-	#sb-ranking-table {
+	.sb-rt-context {
 		width: 80%
 	}
 }
@@ -92,7 +92,7 @@ h2.sb-fifa-ranking {
 	#sb-fifa-link {
 		display:none;
 	}
-	#sb-ranking-table {
+	.sb-rt-context {
 		width: 65%
 	}
 }
@@ -100,7 +100,7 @@ h2.sb-fifa-ranking {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-	#sb-ranking-table {
+	.sb-rt-context {
 		width: 100%
 	}	
 }

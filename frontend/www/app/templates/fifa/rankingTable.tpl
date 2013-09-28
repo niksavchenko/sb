@@ -1,5 +1,5 @@
 <table id="sb-ranking-table" class="sb-rt table table-condensed table-hover">
-  <caption>FIFA Ranking</caption>
+  <caption>All countries ranking</caption>
   <thead>
     <tr>
       <th class="sb-rt-rank">Rank</th>
@@ -10,5 +10,6 @@
     </tr>
   </thead>
   <tbody>
+		<tr></tr>
   </tbody>
 </table>

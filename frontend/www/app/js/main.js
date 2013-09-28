@@ -71,6 +71,8 @@ require([
 	console.log('App: ', App);
 	console.log('Router: ', Router);
 	console.log('FooterPageView: ', FooterPageView);
+	_.templateSettings.variable = "rc";
+	//console.log('UNDERSCORE: ', _.max([1,2,3]));
 	App.addInitializer(function () {
 		/* render footer page */
 		var footerPage = new FooterPageView();

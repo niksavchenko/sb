@@ -15,7 +15,8 @@
 }
 
 .flag.flag-ae,
-.flag.flag-are {
+.flag.flag-are,
+.flag.flag-uae {
     background-position: -32px 0
 }
 
@@ -50,7 +51,8 @@
 }
 
 .flag.flag-ao,
-.flag.flag-ago {
+.flag.flag-ago,
+.flag.flag-ang {
     background-position: -144px 0
 }
 
@@ -60,7 +62,8 @@
 }
 
 .flag.flag-as,
-.flag.flag-asm {
+.flag.flag-asm,
+.flag.flag-asa {
     background-position: -176px 0
 }
 
@@ -75,7 +78,8 @@
 }
 
 .flag.flag-aw,
-.flag.flag-abw {
+.flag.flag-abw,
+.flag.flag-aru {
     background-position: -224px 0
 }
 
@@ -95,7 +99,8 @@
 }
 
 .flag.flag-bd,
-.flag.flag-bgd {
+.flag.flag-bgd,
+.flag.flag-ban {
     background-position: -32px -11px
 }
 
@@ -131,12 +136,14 @@
 }
 
 .flag.flag-bm,
-.flag.flag-bmu {
+.flag.flag-bmu,
+.flag.flag-ber {
     background-position: -144px -11px
 }
 
 .flag.flag-bn,
-.flag.flag-brn {
+.flag.flag-brn, 
+.flag.flag-bru {
     background-position: -160px -11px
 }
 
@@ -151,12 +158,14 @@
 }
 
 .flag.flag-bs,
-.flag.flag-bhs {
+.flag.flag-bhs,
+.flag.flag-bah {
     background-position: -208px -11px
 }
 
 .flag.flag-bt,
-.flag.flag-btn {
+.flag.flag-btn,
+.flag.flag-bhu {
     background-position: -224px -11px
 }
 
@@ -166,7 +175,8 @@
 }
 
 .flag.flag-bw,
-.flag.flag-bwa {
+.flag.flag-bwa,
+.flag.flag-bot {
     background-position: 0 -22px
 }
 
@@ -195,12 +205,14 @@
 }
 
 .flag.flag-cf,
-.flag.flag-caf {
+.flag.flag-caf,
+.flag.flag-cta {
     background-position: -96px -22px
 }
 
 .flag.flag-cg,
-.flag.flag-cog {
+.flag.flag-cog,
+.flag.flag-cgo {
     background-position: -112px -22px
 }
 
@@ -243,7 +255,7 @@
 
 .flag.flag-cr,
 .flag.flag-cri,
-.flag.flag-cro {
+.flag.flag-crc {
     background-position: -240px -22px
 }
 
@@ -355,7 +367,8 @@
 }
 
 .flag.flag-fj,
-.flag.flag-fji {
+.flag.flag-fji,	
+.flag.flag-fij {
     background-position: -80px -44px
 }
 
@@ -390,7 +403,8 @@
 }
 
 .flag.flag-gd,
-.flag.flag-grd {
+.flag.flag-grd,
+.flag.flag-grn {
     background-position: -192px -44px
 }
 
@@ -425,12 +439,14 @@
 }
 
 .flag.flag-gm,
-.flag.flag-gmb {
+.flag.flag-gmb,
+.flag.flag-gam {
     background-position: -48px -55px
 }
 
 .flag.flag-gn,
-.flag.flag-gin {
+.flag.flag-gin,
+.flag.flag-gui {
     background-position: -64px -55px
 }
 
@@ -440,7 +456,8 @@
 }
 
 .flag.flag-gq,
-.flag.flag-gnq {
+.flag.flag-gnq,
+.flag.flag-eqg {
     background-position: -96px -55px
 }
 
@@ -455,7 +472,8 @@
 }
 
 .flag.flag-gt,
-.flag.flag-gtm {
+.flag.flag-gtm,	
+.flag.flag-gua {
     background-position: -144px -55px
 }
 
@@ -491,12 +509,14 @@
 }
 
 .flag.flag-hr,
-.flag.flag-hrv {
+.flag.flag-hrv,
+.flag.flag-cro  {
     background-position: 0 -66px
 }
 
 .flag.flag-ht,
-.flag.flag-hti {
+.flag.flag-hti,
+.flag.flag-hai {
     background-position: -16px -66px
 }
 
@@ -586,7 +606,8 @@
 }
 
 .flag.flag-kh,
-.flag.flag-khm {
+.flag.flag-khm,
+.flag.flag-cam {
     background-position: -48px -77px
 }
 
@@ -601,7 +622,8 @@
 }
 
 .flag.flag-kn,
-.flag.flag-kna {
+.flag.flag-kna,
+.flag.flag-skn {
     background-position: -96px -77px
 }
 
@@ -616,12 +638,14 @@
 }
 
 .flag.flag-kw,
-.flag.flag-kwt {
+.flag.flag-kwt,
+.flag.flag-kuw {
     background-position: -144px -77px
 }
 
 .flag.flag-ky,
-.flag.flag-cym {
+.flag.flag-cym,
+.flag.flag-cay {
     background-position: -160px -77px
 }
 
@@ -636,7 +660,8 @@
 }
 
 .flag.flag-lb,
-.flag.flag-lbn {
+.flag.flag-lbn,
+.flag.flag-lib {
     background-position: -208px -77px
 }
 
@@ -651,7 +676,8 @@
 }
 
 .flag.flag-lk,
-.flag.flag-lka {
+.flag.flag-lka,
+.flag.flag-sri {
     background-position: 0 -88px
 }
 
@@ -661,7 +687,8 @@
 }
 
 .flag.flag-ls,
-.flag.flag-lso {
+.flag.flag-lso,
+.flag.flag-les {
     background-position: -32px -88px
 }
 
@@ -706,7 +733,8 @@
 }
 
 .flag.flag-mg,
-.flag.flag-mdg {
+.flag.flag-mdg,
+.flag.flag-mad {
     background-position: -176px -88px
 }
 
@@ -726,12 +754,14 @@
 }
 
 .flag.flag-mm,
-.flag.flag-mmr {
+.flag.flag-mmr,
+.flag.flag-mya {
     background-position: -240px -88px
 }
 
 .flag.flag-mn,
-.flag.flag-mng {
+.flag.flag-mng,
+.flag.flag-mgl {
     background-position: 0 -99px
 }
 
@@ -751,7 +781,8 @@
 }
 
 .flag.flag-mr,
-.flag.flag-mrt {
+.flag.flag-mrt,
+.flag.flag-mtn {
     background-position: -64px -99px
 }
 
@@ -766,7 +797,8 @@
 }
 
 .flag.flag-mu,
-.flag.flag-mus {
+.flag.flag-mus,
+.flag.flag-mri {
     background-position: -112px -99px
 }
 
@@ -786,7 +818,8 @@
 }
 
 .flag.flag-my,
-.flag.flag-mys {
+.flag.flag-mys,
+.flag.flag-mas {
     background-position: -176px -99px
 }
 
@@ -806,7 +839,8 @@
 }
 
 .flag.flag-ne,
-.flag.flag-ner {
+.flag.flag-ner,
+.flag.flag-nig {
     background-position: -240px -99px
 }
 
@@ -820,8 +854,14 @@
 }
 
 .flag.flag-ni,
-.flag.flag-nic {
+.flag.flag-nic,
+.flag.flag-nca {
     background-position: -32px -110px
+}
+
+/* TODO: add flag */
+.flag.flag-nir {
+    background-position: -240px -33px
 }
 
 .flag.flag-nl,
@@ -836,7 +876,8 @@
 }
 
 .flag.flag-np,
-.flag.flag-npl {
+.flag.flag-npl,
+.flag.flag-nep {
     background-position: -80px -110px
 }
 
@@ -856,7 +897,8 @@
 }
 
 .flag.flag-om,
-.flag.flag-omn {
+.flag.flag-omn,
+.flag.flag-oma {
     background-position: -144px -110px
 }
 
@@ -871,7 +913,8 @@
 }
 
 .flag.flag-pf,
-.flag.flag-pyf {
+.flag.flag-pyf,
+.flag.flag-tah {
     background-position: -192px -110px
 }
 
@@ -881,7 +924,8 @@
 }
 
 .flag.flag-ph,
-.flag.flag-phl {
+.flag.flag-phl,
+.flag.flag-phi {
     background-position: -224px -110px
 }
 
@@ -906,12 +950,14 @@
 }
 
 .flag.flag-pr,
-.flag.flag-pri {
+.flag.flag-pri,
+.flag.flag-pur {
     background-position: -48px -121px
 }
 
 .flag.flag-ps,
-.flag.flag-pse {
+.flag.flag-pse,
+.flag.flag-ple {
     background-position: -64px -121px
 }
 
@@ -969,12 +1015,14 @@
 }
 
 .flag.flag-sb,
-.flag.flag-slb {
+.flag.flag-slb,
+.flag.flag-sol {
     background-position: -240px -121px
 }
 
 .flag.flag-sc,
-.flag.flag-syc {
+.flag.flag-syc,
+.flag.flag-sey {
     background-position: 0 -132px
 }
 
@@ -984,7 +1032,8 @@
 }
 
 .flag.flag-sd,
-.flag.flag-sdn {
+.flag.flag-sdn,
+.flag.flag-sud {
     background-position: -32px -132px
 }
 
@@ -994,7 +1043,8 @@
 }
 
 .flag.flag-sg,
-.flag.flag-sgp {
+.flag.flag-sgp,
+.flag.flag-sin {
     background-position: -64px -132px
 }
 
@@ -1072,7 +1122,8 @@
 }
 
 .flag.flag-td,
-.flag.flag-tcd {
+.flag.flag-tcd,
+.flag.flag-cha {
     background-position: -64px -143px
 }
 
@@ -1118,7 +1169,8 @@
 }
 
 .flag.flag-to,
-.flag.flag-ton {
+.flag.flag-ton,
+.flag.flag-tga {
     background-position: -208px -143px
 }
 
@@ -1128,7 +1180,8 @@
 }
 
 .flag.flag-tt,
-.flag.flag-tto {
+.flag.flag-tto,
+.flag.flag-tri {
     background-position: -240px -143px
 }
 
@@ -1138,12 +1191,14 @@
 }
 
 .flag.flag-tw,
-.flag.flag-twn {
+.flag.flag-twn,
+.flag.flag-tpe {
     background-position: -16px -154px
 }
 
 .flag.flag-tz,
-.flag.flag-tza {
+.flag.flag-tza,
+.flag.flag-tan {
     background-position: -32px -154px
 }
 
@@ -1183,7 +1238,8 @@
 }
 
 .flag.flag-vc,
-.flag.flag-vct {
+.flag.flag-vct,
+.flag.flag-vin {
     background-position: -160px -154px
 }
 
@@ -1203,12 +1259,14 @@
 }
 
 .flag.flag-vn,
-.flag.flag-vnm {
+.flag.flag-vnm,
+.flag.flag-vie {
     background-position: -224px -154px
 }
 
 .flag.flag-vu,
-.flag.flag-vut {
+.flag.flag-vut,
+.flag.flag-van {
     background-position: -240px -154px
 }
 
@@ -1223,7 +1281,8 @@
 }
 
 .flag.flag-ws,
-.flag.flag-wsm {
+.flag.flag-wsm,
+.flag.flag-sam {
     background-position: -32px -165px
 }
 
@@ -1254,6 +1313,7 @@
 }
 
 .flag.flag-zw,
-.flag.flag-zwe {
+.flag.flag-zwe,
+.flag.flag-zim {
     background-position: -128px -165px
 }

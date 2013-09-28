@@ -1,6 +1,6 @@
 <?php
 
-class ConfederationController extends Controller
+class ConfederationsController extends Controller
 {
 
 	public function actionIndex()

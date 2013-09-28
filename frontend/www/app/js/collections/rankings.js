@@ -12,11 +12,27 @@ define([
 	'backbone',
 	'models/ranking'
 ], function (Backbone, FifaRankingModel) {
-	'use strict';
+	"use strict";
 	console.log('FIFA Ranking: Rankings Collection');
 	var FifaRankingCollection = Backbone.Collection.extend({
 		model: FifaRankingModel,
-		url: '/ranking'
+		url: '/ranking',
+//		_status: function () {
+//			//console.log('Change Status preprocessing:', this);
+//			this.forEach(function(countryRank) {
+//				var status = countryRank.get("change_status");
+//				if ("Down" === status) {
+//					countryRank.set("change_icon", "icon-circle-arrow-down");
+//				} else if ("Up" === status) {
+//					countryRank.set("change_icon", "icon-circle-arrow-up");
+//				}
+//				//console.log('Change Status preprocessing:', countryRank.toJSON());
+//			});
+//		},
+		initialize: function () {
+			console.log('FIFA Ranking: Rankings Collection: initialize:');
+			//this.on('reset', this._status);
+		}	
 	});
 	console.log('FifaRankingCollection: ', this, FifaRankingCollection);
 	return FifaRankingCollection;

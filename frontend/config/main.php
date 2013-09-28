@@ -50,8 +50,9 @@ return CMap::mergeArray(
 			/* 'common.extensions.behaviors.*', */
 			// uncomment if validators on common folder are required
 			/* 'common.extensions.validators.*', */
-			'common.extensions.yiidebugtb.*',
-			'common.extensions.nsvardumper.*',
+			'common.extensions.yii-json-dataprovider.*',
+			//'common.extensions.yiidebugtb.*',
+			//'common.extensions.nsvardumper.*',
 			'application.components.*',
 			'application.controllers.*',
 			'application.models.*'

@@ -1,2 +1,2 @@
-	<div class="sb-rt-previouse"><%=previouse_date%></div>
-	<div class="sb-rt-next"><%=next_date%></div>
+<div class="prev pull-left"><a href="/#fifa-ranking/<%=rc.prev_rank%>"><i class="icon-chevron-left"></i><%=rc.prev_rank%></a></div>
+<div class="next pull-right"><a href="/#fifa-ranking/<%=rc.next_rank%>"><%=rc.next_rank%><i class="icon-chevron-right"></i></a></div>

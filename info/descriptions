@@ -6,11 +6,11 @@ nik savchenko <niksavchenko@gmail.com>
 /*global require:false, define: false, console: false*/
 /*global define: false, console: false, Backbone: false, $: false, _:false*/
 
+ * @param {object} Backbone - instance of Backbone
  * @param {object} Marionette - Backbone.Marionette
  * @param {string} FooterTemplate - template for current page/elemen
- * @param {object} Backbone instance of Backbone
  * @param {object} Http see utils/http.js
- * @param {object} App Marionett Application instance
+ * @param {object} App - Marionett Application instance
  * @param {object} FifaConfederationModel - model for the collection
  * @param {object} FifaConfederationModel - model for the template
 

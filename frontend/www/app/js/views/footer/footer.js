@@ -4,7 +4,7 @@
  * Renders footer
  * 
  * @param {object} Marionette - Backbone.Marionette
- * @param {string} FooterTemplate - template for current page/elemen
+ * @param {string} FooterTemplate - template for current page/element
  *
  * @author Antonio Ramirez <antonio@clevertech.biz>
  */

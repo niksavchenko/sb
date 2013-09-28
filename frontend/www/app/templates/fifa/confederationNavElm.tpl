@@ -1,1 +1,1 @@
-<a href="<%=abbreviation%>" title="<%=name%>"><%=abbreviation%></a>
+<a href="<%=rc.abbreviation%>" title="<%=rc.name%>"><%=rc.abbreviation%></a>

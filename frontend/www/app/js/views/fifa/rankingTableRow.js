@@ -1,8 +1,6 @@
 /**
  * FIFA Ranking: Ranking Table Row (ItemView)
  * 
- * i.e view of one country ranking (i.e. row)
- * 
  * @see rankingTable.js
  * @param {object} Marionette - Backbone.Marionette
  * @param {string} FifaRankingTableRowTemplate - template for current view
@@ -12,14 +10,27 @@
 /*global define: false, console: false*/
 define([
 	'backboneMarionette',
-	'text!templates/fifa/rankingTableRow.tpl',
-	'models/ranking'
-], function (Marionette, FifaRankingTableRowTemplate, FifaRankingModel) {
-	'use strict';
-	console.log('FIFA Ranking: Ranking ItemView');
+	'models/ranking',
+	'text!templates/fifa/rankingTableRow.tpl'
+], function (Marionette, FifaRankingModel, FifaRankingTableRowTemplate) {
+	"use strict";
+	console.log('FIFA Ranking: Ranking Row ItemView');
 	return Marionette.ItemView.extend({
 		model: FifaRankingModel,
+		tagName: "tr",
 		template: FifaRankingTableRowTemplate,
-		tagName: "tr"
+		beforeRender: function() {
+			console.log('BEFORE RENDER: ', this.model.get('change_status'));
+			var view = {};
+			var status = this.model.get("change_status");
+				if ("Down" === status) {
+					view.icon = "icon-circle-arrow-down";
+				} else if ("Up" === status) {
+					view.icon = "icon-circle-arrow-up";
+				} else {
+					view.icon = "icon-minus";
+				}
+			this.model.set('view', view);
+		}
 	});
 });

@@ -1,9 +1,9 @@
 /**
  * Application controller
  *
- *@param {object} Backbone - instance of Backbone lib
- *@param {object} Http - see utils/http.js
- *@param {object} App - Marionett Application instance
+ * @param {object} Backbone - instance of Backbone lib
+ * @param {object} Http - see utils/http.js
+ * @param {object} App - Marionett Application instance
  *
  * @author antonio ramirez <antonio@clevertech.biz>, nik savchenko <niksavchenko@gmail.com>
  */
@@ -66,10 +66,11 @@ define([
 				return true;
 			});
 		},
-		/*  */
-		/*  */
-		/*  */
-		/*  */
+		/*  
+		 * 
+		 * 
+		 * 
+		 */
 		/* renders dashboard */
 		goto_dashboard: function (username) {
 			require(['views/dashboard/page'], function (DashboardPage) {
@@ -84,13 +85,15 @@ define([
 				'views/fifa/rank',
 				'views/fifa/confederationsNav',
 				'views/fifa/rankingTable'
-			], function (IndexPageLayout, ConfederationsView, RankingView) {
+			], function (IndexPageLayout, RankView, ConfederationsView, RankingView) {
 				var
 					indexPageLayout = new IndexPageLayout(),
+					rankView = new RankView(),
 					confederationsView = new ConfederationsView(),
 					rankingView = new RankingView();
 				App.pageRegion.show(indexPageLayout);
-				indexPageLayout.nav.show(confederationsView);
+				indexPageLayout.rank.show(rankView);
+				indexPageLayout.confederations.show(confederationsView);
 				indexPageLayout.ranking.show(rankingView);
 			});
 		},

@@ -117,7 +117,7 @@
             // definition, to provide custom serialization for your view's data.
             serializeData: function(){
                 var data;
-
+								
                 if (this.model) {
                     data = this.model.toJSON();
                 }

@@ -10,11 +10,11 @@ define([
 	'backbone',
 	'models/confederation'
 ], function (Backbone, FifaConfederationModel) {
-	'use strict';
+	"use strict";
 	console.log('FIFA Ranking: Confederations Collection');
 	var FifaConfederationCollection = Backbone.Collection.extend({
 		model: FifaConfederationModel,
-		url: '/confederation'
+		url: '/confederations'
 	});
 	console.log('FifaConfederationsCollection: ', this, FifaConfederationCollection);
 	return FifaConfederationCollection;

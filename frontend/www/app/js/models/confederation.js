@@ -8,7 +8,7 @@
 define([
 	'backbone'
 ], function (Backbone) {
-	'use strict';
+	"use strict";
 	var FifaConfederationModel = Backbone.Model.extend({
 		//urlRoot: '/ranking'
 		defaults: {
